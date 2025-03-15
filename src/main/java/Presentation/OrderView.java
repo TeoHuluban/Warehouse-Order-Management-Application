@@ -84,6 +84,9 @@ public class OrderView extends JFrame {
                     if(Integer.parseInt(f3.getText()) < 0)
                         throw new NoSuchElementException("Negative quantity!");
 
+                    if(Integer.parseInt(f3.getText()) == 0)
+                        throw new NoSuchElementException("0 quantity!");
+
                     if(Integer.parseInt(f3.getText()) > p.getStock())
                         throw new NoSuchElementException("Not enough stock!("+p.getStock()+")");
 
